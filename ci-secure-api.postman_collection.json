@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "bf778eab-87ed-4165-aeed-d65c198e26df",
+		"name": "ci-secure-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImRoYXJtZXNoQGdtYWlsLmNvbSIsImlhdCI6MTYxNDA4Nzg0MywiZXhwIjoxNjE0MDg3ODUzfQ.2ev9CZX94EYR05d-gHNOGAGzjiMUdPZFZVM2U3RPCxo"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/client"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "dharmesh@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "dharmesh",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8080/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "dharmesh",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "dharmesh@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "dharmesh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "dharmesh",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "dharmesh@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "dharmesh",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
